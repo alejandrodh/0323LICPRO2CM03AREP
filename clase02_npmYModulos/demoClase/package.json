@@ -1,0 +1,26 @@
+{
+  "name": "clase02_npmymodulos",
+  "version": "1.0.0",
+  "description": "material de clase y demos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandrodh/0323LICPRO2CM03AREP.git"
+  },
+  "keywords": [
+    "prog2",
+    "licenciatura"
+  ],
+  "author": "ajv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandrodh/0323LICPRO2CM03AREP/issues"
+  },
+  "homepage": "https://github.com/alejandrodh/0323LICPRO2CM03AREP#readme",
+  "dependencies": {
+    "popular-movie-quotes": "^1.2.4"
+  }
+}
