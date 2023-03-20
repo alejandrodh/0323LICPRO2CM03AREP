@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <%- include("./partials/head") %>
+  <body>
+    <h1><%= tituloPrincipal %></h1>
+    <section>
+      <article>
+        <h2>Título demo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptates ipsum culpa sint maxime ut, itaque facilis excepturi nemo consectetur fugit minus assumenda sequi illum in cupiditate? Itaque, sapiente reprehenderit!
+        </p>
+      </article>
+    </section>
+    <h2>Lista de alumnos</h2>
+    <ul>
+      <% for(let i=0; i<nombres.length; i++){ %>
+        <li><%= nombres[i] %></li>
+      <% } %>
+    </ul>
+
+  <%- include("./partials/footer")%>
+  </body>
+</html>
