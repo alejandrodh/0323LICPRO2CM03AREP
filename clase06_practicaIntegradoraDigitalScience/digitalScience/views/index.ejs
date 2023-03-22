@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Heroes de la ciencia</h1>
+    <ul>
+      <% for(let i=0; i<heroes.length; i++){ %>
+        <li><a href="/heroes/detalle/id/<%= heroes[i].id %>"><%= heroes[i].nombre %></a></li>
+      <% } %>
+    </ul>
+  </body>
+</html>
