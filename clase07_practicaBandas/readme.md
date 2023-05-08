@@ -1,0 +1,1 @@
+Hicimos la práctica integradora Bandas de música. Algunos grupos prefirieron trabajar en el proyecto integrador.

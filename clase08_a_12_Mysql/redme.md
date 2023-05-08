@@ -1,0 +1,1 @@
+Desde la clase 8 a las clase 12 vimos mysql. Todo lo practicamos en Workbench.
