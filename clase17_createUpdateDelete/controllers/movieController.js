@@ -30,6 +30,7 @@ let indexController = {
     
     },
     delete: function(req, res){
+        //Tendremos que pensar el código del controlador dependiendo de qué estrategia usemos para identificar el id del elemento a borrar. En este caso estamos usando la estrategia del campo hidden dentro del formulario. 
         let id = req.body.id;
 
         // return res.send(id);
