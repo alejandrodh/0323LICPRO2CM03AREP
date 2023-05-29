@@ -47,6 +47,9 @@ let indexController = {
 
         //Ponerlos en session.
 
+        //Y si el usuario quiere, agregar la cookie para que lo recuerde.
+        
+
         return res.send('procesando login');
     }
 
