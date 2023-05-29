@@ -40,17 +40,40 @@ let indexController = {
             })
     },
     login: function(req, res){
-        return res.render('login');
+        //Si el usuario está logueado redirigirlo a home
+        if(req.session.user != undefined){
+            return res.redirect('/')
+        } else {
+            return res.render('login');
+        }
     },
     processLogin: function(req, res){
         //Tengo que buscar los datos de la db.
 
         //Ponerlos en session.
+        req.session.user = {
+            email: "ale@dh.com",
+            userName: "Ale"
+        }
+        //Preguntar si el usuario tildó el checkbox para recordarlo
+        // return res.send (req.body);
+        if(req.body.recordarme != undefined){
+            res.cookie('cookieEspecial', 'el dato que quiero guardar', {maxAge: 1000*60*123123123})
+        }
 
+        return res.send(req.session)
         //Y si el usuario quiere, agregar la cookie para que lo recuerde.
         
 
         return res.send('procesando login');
+    },
+    logout: function(req, res){
+        // destruir session
+        req.session.destroy();
+
+        //Destruyo la cookie
+
+        return res.redirect('/');
     }
 
 }

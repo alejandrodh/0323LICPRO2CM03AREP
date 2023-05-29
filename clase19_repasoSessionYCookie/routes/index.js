@@ -10,6 +10,7 @@ router.get('/login', indexController.login) //Mostrar form de login
 
 router.post('/register', indexController.store); //Guarda al usuario en la base de datos.
 router.post('/login', indexController.processLogin) //Mostrar form de login
+router.post('/logout', indexController.logout)
 
 
 module.exports = router;

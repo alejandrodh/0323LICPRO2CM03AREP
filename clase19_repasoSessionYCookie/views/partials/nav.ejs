@@ -1,7 +1,13 @@
 <nav>
     <ul class="access-menu">
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Registro</a></li>
+        <% if(locals.user != undefined){ %>
+            <form action="/logout" method='POST'>
+                <button type="submit">Logout</button>
+            </form>
+        <% } else { %>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Registro</a></li>
+        <% } %>
     </ul>
 </nav>
 <nav>

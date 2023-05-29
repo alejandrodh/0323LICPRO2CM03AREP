@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var moviesRouter = require('./routes/movies');
@@ -20,6 +21,25 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Session se inicia antes de las rutas
+app.use(session(
+  {
+    secret:'udesamovie',
+    saveUninitialized: true,
+    resave: false
+  }
+));
+
+//Pasar datos de session a las vistas. Usaremos un middleware de apolicación.
+app.use(function(req, res, next){
+  if(req.session.user != undefined){
+    res.locals.user = req.session.user
+    return next();
+  }
+  return next();
+})
+
 
 
 app.use('/', indexRouter);
