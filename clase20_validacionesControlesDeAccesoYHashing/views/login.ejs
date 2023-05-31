@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>UdeSA Movies</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>UdeSA Movies - Login</h1>
+  <%- include('./partials/nav.ejs') %>
+  
+  <form action="/login" method="POST">
+    <input type="email" name="email" id="" placeholder="email" value="">
+    <input type="password" name="password" placeholder="password" value="">
+    <input type="checkbox" name="recordarme" value=""><label for="">Recordame</label>
+    <button type="submit">Login</button>
+  </form>
+  <p>Errores</p>
+  <% if(locals.errors != undefined) { %>
+    <p> <%= errors.message %></p>
+  <% } %>
+</body>
+
+</html>
