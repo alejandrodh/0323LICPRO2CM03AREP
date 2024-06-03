@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>UdeSA Movies</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>UdeSA Movies - Bienvenidos</h1>
+
+  <% if(locals.user != undefined ){%>
+    <p>Bienvenido: <%= locals.user.userName %></p>
+  <% } %>
+
+  <%- include('./partials/nav.ejs') %>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>UdeSA Movies</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>UdeSA Movies - Registrate</h1>
+  <%- include('./partials/nav.ejs') %>
+  
+  <form action="/register" method="POST">
+    <input type="email" name="email" id="" placeholder="email" value="">
+    <input type="text" name="username" id="" placeholder="user name" value="">
+    <input type="password" name="password" placeholder="password" value="">
+    <button type="submit">Registrarme</button>
+  </form>
+</body>
+
+</html>
