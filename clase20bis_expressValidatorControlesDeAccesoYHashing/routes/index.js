@@ -25,7 +25,7 @@ let loginValidations = [
             })
             .then(function(user){
                 if(user){ //Si usuario es null lo negamos.
-                    throw new Error('Encontré usuario ahora tenés que validar la contraseña para dejarlo pasar...')
+                    throw new Error(`Encontré usuario ${user.email} ahora tenés que validar la contraseña para dejarlo pasar...`)
                 }
             })
         }),
